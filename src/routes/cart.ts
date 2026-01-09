@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import {  } from '../controllers/cartController.js';
+import { getCart, addCartItem, updateCartItem, deleteCartItem, clearCart } from '../controllers/cartController.js';
 
 export const cartRouter = Router();
 
-cartRouter.get('/:userId', );
-cartRouter.post('/:userId/items', );
-cartRouter.put('/:userId/items/:id', );
-cartRouter.delete('/:userId/items/:id', );
-cartRouter.delete('/:userId', );
+cartRouter.get('/:userId', getCart);
+cartRouter.post('/:userId/items', addCartItem);
+cartRouter.put('/:userId/items/:id', updateCartItem);
+cartRouter.delete('/:userId/items/:id', deleteCartItem);
+cartRouter.delete('/:userId', clearCart);
